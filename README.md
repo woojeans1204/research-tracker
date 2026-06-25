@@ -18,6 +18,7 @@ research-tracker/
   README.md
   tracker-rules/
     global-rules.md
+    paper-scout-guide.md
   topics/
     reasoning/
       reading-queue.md
@@ -42,6 +43,7 @@ topics/<topic-name>/
 - `paper-log.md`: completed, skimmed, skipped, or archived entries
 - `tracker-rules.md`: topic-specific rules or exceptions
 - `tracker-rules/global-rules.md`: shared rules across all topics
+- `tracker-rules/paper-scout-guide.md`: reusable workflow for API-based LLM reasoning trend-corpus collection and synthesis
 
 ## How To Add A New Topic
 
