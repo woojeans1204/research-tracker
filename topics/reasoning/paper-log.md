@@ -1,8 +1,41 @@
 # Paper Log
 
-Last updated: 2026-06-23
+Last updated: 2026-06-26
 
 ## Read
+
+### [2026-06-26] e3: Learning to Explore Enables Extrapolation of Test-Time Compute for LLMs
+- Link: https://matthewyryang.github.io/e3/
+- Source: uploaded PDF / ICLR 2026 conference paper
+- Recommended by: manual
+- Decision: read
+- Priority: medium-high
+- Topic tags: reasoning, RLVR, test-time-compute, extrapolation, curriculum, negative-gradient, analysis-paper
+- Broader trend: explaining when RL-trained reasoning models can actually extrapolate beyond their training token budget
+
+#### Why this paper
+- Useful as an example of reframing a relatively simple training recipe around a sharper research question: why test-time compute scaling often fails to extrapolate beyond the training budget.
+- The main value is not a radically new optimizer or code-level algorithm, but a clean analytical story connecting asymmetries, negative gradients, curriculum design, and extrapolation behavior.
+
+#### Core idea
+- e3 argues that models extrapolate test-time compute better when they learn in-context exploration rather than merely producing longer traces.
+- The recipe relies on three ingredients: base-model asymmetries such as a verification-generation gap, keeping negative gradients from incorrect traces during RL, and coupling task difficulty with training token budget through curriculum.
+- Practically, this looks closer to finding a training configuration and budget/data schedule that encourages extrapolation than introducing a fundamentally new learning algorithm.
+
+#### Critical notes
+- Initial reaction: somewhat deflating technically, because the concrete intervention seems closer to parameter/budget/curriculum search than a major new algorithmic contribution.
+- Working critique: the paper's actual method may be "not doing that much" at the code/intervention level; a lot of the contribution is in how the authors define the failure mode and organize the analysis around extrapolation.
+- Still, the paper is valuable because it gives a solid causal-looking narrative: current models fail extrapolation, asymmetry enables useful internal feedback, negative gradients lengthen and diversify traces, and a coupled curriculum preserves exploration without making RL optimization too hard.
+- The important lesson for my own research is that a paper can be strong if it turns a modest recipe into a disciplined argument with controlled ablations, mechanism hypotheses, and a clear evaluation regime.
+
+#### Related papers
+- Plan and Budget: Effective and Efficient Test-Time Scaling on Reasoning Large Language Models - https://openreview.net/forum?id=ctspw4CqbS
+- Beyond Magnitude: Leveraging Direction of RLVR Updates for LLM Reasoning - https://openreview.net/forum?id=r6Pw3RiMYL
+
+#### Personal notes
+- The key takeaway is not "e3 is a surprising new algorithm," but "the authors made a solid research contribution by structuring the question well."
+- For future research writing, use this as a template: identify a real failure regime, introduce the right diagnostic axis, propose a mechanism, verify it through ablations, then present the final recipe as the consequence of the analysis.
+- This is a good reminder that strong paper construction can make even a seemingly modest intervention feel meaningful when the logic and evidence are tight.
 
 ### [2026-06-23] Plan and Budget: Effective and Efficient Test-Time Scaling on Reasoning Large Language Models
 - Link: https://openreview.net/forum?id=ctspw4CqbS
