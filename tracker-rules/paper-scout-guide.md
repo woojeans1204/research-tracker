@@ -1,6 +1,6 @@
 # Paper Scout Guide
 
-Last updated: 2026-06-25
+Last updated: 2026-06-26
 
 ## Purpose
 
@@ -47,6 +47,8 @@ Collection and analysis stay separate:
 - The raw run snapshot preserves what was collected.
 - The normalized corpus is what analysis operates on.
 - Representative examples are chosen after clustering, not during collection.
+
+The raw snapshot format is defined in `tracker-rules/run-file-format-rules.md`.
 
 ## Collection Target
 
@@ -295,7 +297,7 @@ Before trusting a scout run, check:
 
 Use generated run outputs for the full trend-analysis corpus.
 
-- Full crawl output should go under `runs/reasoning/<YYYY-MM-DD>/` if automation scripts are added.
+- Full crawl output should go under `runs/reasoning/raw/raw-records.jsonl`.
 - Curated active candidates may go to `topics/reasoning/reading-queue.md` only when the user wants a reading queue.
 - Completed, skimmed, skipped, or archived reading entries go to `topics/reasoning/paper-log.md`.
 - Reasoning-specific exceptions go to `topics/reasoning/tracker-rules.md`.

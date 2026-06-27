@@ -18,12 +18,17 @@ research-tracker/
   README.md
   tracker-rules/
     global-rules.md
+    run-file-format-rules.md
     paper-scout-guide.md
   topics/
     reasoning/
       reading-queue.md
       paper-log.md
       tracker-rules.md
+  runs/
+    reasoning/
+      raw/
+        raw-records.jsonl
 ```
 
 ## Topic Structure
@@ -43,7 +48,9 @@ topics/<topic-name>/
 - `paper-log.md`: completed, skimmed, skipped, or archived entries
 - `tracker-rules.md`: topic-specific rules or exceptions
 - `tracker-rules/global-rules.md`: shared rules across all topics
+- `tracker-rules/run-file-format-rules.md`: schema for broad-metadata run snapshots
 - `tracker-rules/paper-scout-guide.md`: reusable workflow for API-based LLM reasoning trend-corpus collection and synthesis
+- `runs/reasoning/raw/raw-records.jsonl`: stable broad-metadata snapshot for the current reasoning corpus
 
 ## How To Add A New Topic
 
