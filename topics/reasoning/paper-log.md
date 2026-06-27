@@ -1,6 +1,15 @@
 # Paper Log
 
-Last updated: 2026-06-26
+Last updated: 2026-06-27
+
+## Recommendation Guidance
+
+### [2026-06-27] Diversify beyond test-time scaling
+- User feedback: stop over-recommending test-time scaling / test-time compute papers for now.
+- Before recommending the next paper, check `runs/reasoning/processed/trend-report.md` and deliberately sample from other visible clusters.
+- Near-term recommendation priority should shift toward multimodal reasoning, agentic planning, evaluation/benchmarks, knowledge-grounded reasoning, training/distillation, robustness, domain reasoning, or code/tool reasoning.
+- Only recommend another test-time scaling paper if it is clearly exceptional, directly answers an active user question, or contrasts sharply with the already-read papers.
+- Avoid treating "reasoning = test-time compute" as the default frame.
 
 ## Read
 
